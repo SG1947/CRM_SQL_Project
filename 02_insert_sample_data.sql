@@ -43,6 +43,16 @@ INSERT INTO leads (first_name, last_name, email, phone, company_name, source_id,
 ('Robert', 'King', 'robert.king@example.com', '8234567890', 'King Inc', 8, 4, 8),
 ('Emily', 'Clark', 'emily.clark@example.com', '9234567890', 'Clark LLC', 9, 5, 9),
 ('Nathan', 'Hall', 'nathan.hall@example.com', '1034567890', 'Hall Agency', 10, 1, 10);
+UPDATE leads SET source = 'Website' WHERE lead_id = 1;
+UPDATE leads SET source = 'Referral' WHERE lead_id = 2;
+UPDATE leads SET source = 'LinkedIn' WHERE lead_id = 3;
+UPDATE leads SET source = 'Email Campaign' WHERE lead_id = 4;
+UPDATE leads SET source = 'Phone Call' WHERE lead_id = 5;
+UPDATE leads SET source = 'Facebook Ad' WHERE lead_id = 6;
+UPDATE leads SET source = 'Event' WHERE lead_id = 7;
+UPDATE leads SET source = 'Google Ads' WHERE lead_id = 8;
+UPDATE leads SET source = 'Walk-in' WHERE lead_id = 9;
+UPDATE leads SET source = 'Instagram' WHERE lead_id = 10;
 
 -- Insert customers (converted from leads)
 INSERT INTO customers (lead_id, company_name, contact_name, email, phone, assigned_to) VALUES

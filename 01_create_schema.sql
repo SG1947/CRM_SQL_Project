@@ -50,6 +50,8 @@ CREATE TABLE leads (
     FOREIGN KEY (stage_id) REFERENCES sales_stages(stage_id),
     FOREIGN KEY (assigned_to) REFERENCES users(user_id)
 );
+ALTER TABLE leads
+ADD COLUMN source VARCHAR(100);
 
 -- Customers table
 CREATE TABLE customers (
